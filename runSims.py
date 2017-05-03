@@ -202,7 +202,7 @@ def buildCopyFromData(gear_reset, apl_builder, name, line, isTrinket = 0, isProc
             gear_override = line,
             apl_override = apl_override)
 
-def buildPairs(list):
+def buildPairs(l):
     def mergePair(p):
         first = p[0]
         second = p[1]
@@ -213,8 +213,8 @@ def buildPairs(list):
                 "isTrinket": first.get("isTrinket", 0) + second.get("isTrinket", 0),
                 "talents_override": first.get("talents_override") or second.get("talents_override")
                 }
-    pairs = [pair for pair in combinations(list, 2)]
-    return map(mergePair, pairs)
+    pairs = [pair for pair in combinations(l, 2)]
+    return list(map(mergePair, pairs)) + legendaries.unique_pairs
 
 parser = argparse.ArgumentParser()
 parser.add_argument("type", help="Either 'legendary' or 'trinket'")

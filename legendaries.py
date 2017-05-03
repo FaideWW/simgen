@@ -14,3 +14,7 @@ cat = [
         {"name":  "Chatoyant",  "line":  "finger1=chatoyant_signet,id=137040,stats=0agi_428vers_0crit_0mastery_0haste"},
         {"name":  "TWC", "line":  "hands=the_wildshapers_clutch,id=137094,stats=401agi_104vers_0crit_0mastery_0haste"}
         ];
+
+unique_pairs = [
+        {"name": "AHR+VFS", "line": "trinket1=eye_of_guarm,id=142506,stats=2994agi_1370vers_0crit_0mastery_0haste\ntrinket2=eye_of_guarm,id=142506,stats=2994agi_1370vers_0crit_0mastery_0haste", "isTrinket": 2}
+        ]
