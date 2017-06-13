@@ -226,7 +226,7 @@ actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up&(target.time
 actions+=/swipe_bear
 """)
 
-def buildAPL(apl_template = "", talents = "", proc_sephuz = "", use_trinket_1 = "", use_trinket_2 = ""):
+def buildAPL(apl_template = Template(""""""), talents = "", proc_sephuz = "", use_trinket_1 = "", use_trinket_2 = ""):
     return apl_template.substitute(
             talents_line = talents,
             maybe_proc_sephuz = proc_sephuz,
@@ -296,7 +296,7 @@ trinket2=eye_of_guarm,id=142506${trinket_stat_template}
 """)
 
 copy_template = Template("""
-copy=${copy_name}
+copy="${copy_name}"
 ${gear_reset}
 ${gear_override}
 ${apl_override}
