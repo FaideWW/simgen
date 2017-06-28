@@ -1,0 +1,757 @@
+
+
+
+iterations=10000
+target_error=0.05
+
+
+optimal_raid=1
+max_time=300
+vary_combat_length=0.2
+enemy=Fluffy_Pillow
+enemy=enemy2
+enemy=enemy3
+
+output=result/920_3t_bear_trinkets3caac6d2-f751-44f7-ba65-95f22300851f
+
+
+druid="Baseline"
+level=110
+race=tauren
+role=tank
+position=front
+artifact=57:0:0:0:0:948:3:949:3:950:3:951:3:952:4:953:3:954:3:955:3:956:4:957:1:958:1:959:1:960:1:961:1:962:1:979:1:1334:1:1366:1:1509:4:1510:1:1511:1:1634:1
+spec=guardian
+
+
+neck=,id=142428,stats=18626agi_5653crit_5653haste_5653mastery_5653versatility,enchant=mark_of_the_hidden_satyr
+main_hand=claws_of_ursoc,id=128821,gem_id=133686/137412/137327/0,ilevel=942
+off_hand=claws_of_ursoc,id=128822,ilevel=,ilevel=942
+
+
+talents=http://us.battle.net/wow/en/tool/talent-calculator#Uba!0000110
+
+actions.precombat=flask,type=flask_of_the_seventh_demon
+actions.precombat+=/food,type=lemon_herb_filet
+actions.precombat+=/augmentation,type=defiled
+actions.precombat+=/bear_form
+actions.precombat+=/snapshot_stats
+actions.precombat+=/potion,name=prolonged_power
+
+actions=auto_attack
+actions+=/potion,name=prolonged_power,if=buff.rage_of_the_sleeper.up
+actions+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up|!talent.brambles.enabled&equipped.144432
+actions+=/berserking,if=buff.rage_of_the_sleeper.up
+actions+=/bristling_fur,if=!buff.rage_of_the_sleeper.up
+actions+=/incarnation,if=((dot.thrash_bear.stack=5&equipped.137067)|(dot.thrash_bear.stack=3&!equipped.137067))&cooldown.thrash_bear.remains>0
+actions+=/rage_of_the_sleeper,if=buff.bear_form.up
+
+actions+=/use_item,slot=trinket1
+
+actions+=/thrash_bear
+actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up,cycle_targets=1,max_cycle_targets=2
+actions+=/mangle
+actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up|buff.galactic_guardian.up,cycle_targets=1
+actions+=/maul
+actions+=/swipe_bear
+
+
+copy="147012_Umbral Moonglaives (950)"
+
+
+trinket1=,id=147012,ilevel=950
+
+
+
+copy="147012_Umbral Moonglaives (955)"
+
+
+trinket1=,id=147012,ilevel=955
+
+
+
+copy="147011_Vial of Ceaseless Toxins (900)"
+
+
+trinket1=,id=147011,ilevel=900
+
+
+
+copy="147011_Vial of Ceaseless Toxins (905)"
+
+
+trinket1=,id=147011,ilevel=905
+
+
+
+copy="147011_Vial of Ceaseless Toxins (910)"
+
+
+trinket1=,id=147011,ilevel=910
+
+
+
+copy="147011_Vial of Ceaseless Toxins (915)"
+
+
+trinket1=,id=147011,ilevel=915
+
+
+
+copy="147011_Vial of Ceaseless Toxins (920)"
+
+
+trinket1=,id=147011,ilevel=920
+
+
+
+copy="147011_Vial of Ceaseless Toxins (925)"
+
+
+trinket1=,id=147011,ilevel=925
+
+
+
+copy="147011_Vial of Ceaseless Toxins (930)"
+
+
+trinket1=,id=147011,ilevel=930
+
+
+
+copy="147011_Vial of Ceaseless Toxins (935)"
+
+
+trinket1=,id=147011,ilevel=935
+
+
+
+copy="147011_Vial of Ceaseless Toxins (940)"
+
+
+trinket1=,id=147011,ilevel=940
+
+
+
+copy="147011_Vial of Ceaseless Toxins (945)"
+
+
+trinket1=,id=147011,ilevel=945
+
+
+
+copy="147011_Vial of Ceaseless Toxins (950)"
+
+
+trinket1=,id=147011,ilevel=950
+
+
+
+copy="147011_Vial of Ceaseless Toxins (955)"
+
+
+trinket1=,id=147011,ilevel=955
+
+
+
+copy="121808_Nether Conductors (865)"
+
+
+trinket1=,id=121808,ilevel=865
+
+
+
+copy="121808_Nether Conductors (870)"
+
+
+trinket1=,id=121808,ilevel=870
+
+
+
+copy="121808_Nether Conductors (875)"
+
+
+trinket1=,id=121808,ilevel=875
+
+
+
+copy="121808_Nether Conductors (880)"
+
+
+trinket1=,id=121808,ilevel=880
+
+
+
+copy="121808_Nether Conductors (885)"
+
+
+trinket1=,id=121808,ilevel=885
+
+
+
+copy="121808_Nether Conductors (890)"
+
+
+trinket1=,id=121808,ilevel=890
+
+
+
+copy="121808_Nether Conductors (895)"
+
+
+trinket1=,id=121808,ilevel=895
+
+
+
+copy="121808_Nether Conductors (900)"
+
+
+trinket1=,id=121808,ilevel=900
+
+
+
+copy="121808_Nether Conductors (905)"
+
+
+trinket1=,id=121808,ilevel=905
+
+
+
+copy="121808_Nether Conductors (910)"
+
+
+trinket1=,id=121808,ilevel=910
+
+
+
+copy="121808_Nether Conductors (915)"
+
+
+trinket1=,id=121808,ilevel=915
+
+
+
+copy="121808_Nether Conductors (920)"
+
+
+trinket1=,id=121808,ilevel=920
+
+
+
+copy="121808_Nether Conductors (925)"
+
+
+trinket1=,id=121808,ilevel=925
+
+
+
+copy="121808_Nether Conductors (930)"
+
+
+trinket1=,id=121808,ilevel=930
+
+
+
+copy="121808_Nether Conductors (935)"
+
+
+trinket1=,id=121808,ilevel=935
+
+
+
+copy="121808_Nether Conductors (940)"
+
+
+trinket1=,id=121808,ilevel=940
+
+
+
+copy="121808_Nether Conductors (945)"
+
+
+trinket1=,id=121808,ilevel=945
+
+
+
+copy="121808_Nether Conductors (950)"
+
+
+trinket1=,id=121808,ilevel=950
+
+
+
+copy="121808_Nether Conductors (955)"
+
+
+trinket1=,id=121808,ilevel=955
+
+
+
+copy="140026_The Devilsaur's Bite (865)"
+
+
+trinket1=,id=140026,ilevel=865
+
+
+
+copy="140026_The Devilsaur's Bite (870)"
+
+
+trinket1=,id=140026,ilevel=870
+
+
+
+copy="140026_The Devilsaur's Bite (875)"
+
+
+trinket1=,id=140026,ilevel=875
+
+
+
+copy="140026_The Devilsaur's Bite (880)"
+
+
+trinket1=,id=140026,ilevel=880
+
+
+
+copy="140026_The Devilsaur's Bite (885)"
+
+
+trinket1=,id=140026,ilevel=885
+
+
+
+copy="140026_The Devilsaur's Bite (890)"
+
+
+trinket1=,id=140026,ilevel=890
+
+
+
+copy="140026_The Devilsaur's Bite (895)"
+
+
+trinket1=,id=140026,ilevel=895
+
+
+
+copy="140026_The Devilsaur's Bite (900)"
+
+
+trinket1=,id=140026,ilevel=900
+
+
+
+copy="140026_The Devilsaur's Bite (905)"
+
+
+trinket1=,id=140026,ilevel=905
+
+
+
+copy="140026_The Devilsaur's Bite (910)"
+
+
+trinket1=,id=140026,ilevel=910
+
+
+
+copy="140026_The Devilsaur's Bite (915)"
+
+
+trinket1=,id=140026,ilevel=915
+
+
+
+copy="140026_The Devilsaur's Bite (920)"
+
+
+trinket1=,id=140026,ilevel=920
+
+
+
+copy="140026_The Devilsaur's Bite (925)"
+
+
+trinket1=,id=140026,ilevel=925
+
+
+
+copy="140026_The Devilsaur's Bite (930)"
+
+
+trinket1=,id=140026,ilevel=930
+
+
+
+copy="140026_The Devilsaur's Bite (935)"
+
+
+trinket1=,id=140026,ilevel=935
+
+
+
+copy="140026_The Devilsaur's Bite (940)"
+
+
+trinket1=,id=140026,ilevel=940
+
+
+
+copy="140026_The Devilsaur's Bite (945)"
+
+
+trinket1=,id=140026,ilevel=945
+
+
+
+copy="140026_The Devilsaur's Bite (950)"
+
+
+trinket1=,id=140026,ilevel=950
+
+
+
+copy="140026_The Devilsaur's Bite (955)"
+
+
+trinket1=,id=140026,ilevel=955
+
+
+
+copy="140027_Ley Spark (865)"
+
+
+trinket1=,id=140027,ilevel=865
+
+
+
+copy="140027_Ley Spark (870)"
+
+
+trinket1=,id=140027,ilevel=870
+
+
+
+copy="140027_Ley Spark (875)"
+
+
+trinket1=,id=140027,ilevel=875
+
+
+
+copy="140027_Ley Spark (880)"
+
+
+trinket1=,id=140027,ilevel=880
+
+
+
+copy="140027_Ley Spark (885)"
+
+
+trinket1=,id=140027,ilevel=885
+
+
+
+copy="140027_Ley Spark (890)"
+
+
+trinket1=,id=140027,ilevel=890
+
+
+
+copy="140027_Ley Spark (895)"
+
+
+trinket1=,id=140027,ilevel=895
+
+
+
+copy="140027_Ley Spark (900)"
+
+
+trinket1=,id=140027,ilevel=900
+
+
+
+copy="140027_Ley Spark (905)"
+
+
+trinket1=,id=140027,ilevel=905
+
+
+
+copy="140027_Ley Spark (910)"
+
+
+trinket1=,id=140027,ilevel=910
+
+
+
+copy="140027_Ley Spark (915)"
+
+
+trinket1=,id=140027,ilevel=915
+
+
+
+copy="140027_Ley Spark (920)"
+
+
+trinket1=,id=140027,ilevel=920
+
+
+
+copy="140027_Ley Spark (925)"
+
+
+trinket1=,id=140027,ilevel=925
+
+
+
+copy="140027_Ley Spark (930)"
+
+
+trinket1=,id=140027,ilevel=930
+
+
+
+copy="140027_Ley Spark (935)"
+
+
+trinket1=,id=140027,ilevel=935
+
+
+
+copy="140027_Ley Spark (940)"
+
+
+trinket1=,id=140027,ilevel=940
+
+
+
+copy="140027_Ley Spark (945)"
+
+
+trinket1=,id=140027,ilevel=945
+
+
+
+copy="140027_Ley Spark (950)"
+
+
+trinket1=,id=140027,ilevel=950
+
+
+
+copy="140027_Ley Spark (955)"
+
+
+trinket1=,id=140027,ilevel=955
+
+
+
+copy="141537_Thrice-Accursed Compass (865)"
+
+
+trinket1=,id=141537,ilevel=865
+
+
+
+copy="141537_Thrice-Accursed Compass (870)"
+
+
+trinket1=,id=141537,ilevel=870
+
+
+
+copy="141537_Thrice-Accursed Compass (875)"
+
+
+trinket1=,id=141537,ilevel=875
+
+
+
+copy="141537_Thrice-Accursed Compass (880)"
+
+
+trinket1=,id=141537,ilevel=880
+
+
+
+copy="141537_Thrice-Accursed Compass (885)"
+
+
+trinket1=,id=141537,ilevel=885
+
+
+
+copy="141537_Thrice-Accursed Compass (890)"
+
+
+trinket1=,id=141537,ilevel=890
+
+
+
+copy="141537_Thrice-Accursed Compass (895)"
+
+
+trinket1=,id=141537,ilevel=895
+
+
+
+copy="141537_Thrice-Accursed Compass (900)"
+
+
+trinket1=,id=141537,ilevel=900
+
+
+
+copy="141537_Thrice-Accursed Compass (905)"
+
+
+trinket1=,id=141537,ilevel=905
+
+
+
+copy="141537_Thrice-Accursed Compass (910)"
+
+
+trinket1=,id=141537,ilevel=910
+
+
+
+copy="141537_Thrice-Accursed Compass (915)"
+
+
+trinket1=,id=141537,ilevel=915
+
+
+
+copy="141537_Thrice-Accursed Compass (920)"
+
+
+trinket1=,id=141537,ilevel=920
+
+
+
+copy="141537_Thrice-Accursed Compass (925)"
+
+
+trinket1=,id=141537,ilevel=925
+
+
+
+copy="141537_Thrice-Accursed Compass (930)"
+
+
+trinket1=,id=141537,ilevel=930
+
+
+
+copy="141537_Thrice-Accursed Compass (935)"
+
+
+trinket1=,id=141537,ilevel=935
+
+
+
+copy="141537_Thrice-Accursed Compass (940)"
+
+
+trinket1=,id=141537,ilevel=940
+
+
+
+copy="141537_Thrice-Accursed Compass (945)"
+
+
+trinket1=,id=141537,ilevel=945
+
+
+
+copy="141537_Thrice-Accursed Compass (950)"
+
+
+trinket1=,id=141537,ilevel=950
+
+
+
+copy="141537_Thrice-Accursed Compass (955)"
+
+
+trinket1=,id=141537,ilevel=955
+
+
+
+copy="141585_Six-Feather Fan (865)"
+
+
+trinket1=,id=141585,ilevel=865
+
+
+
+copy="141585_Six-Feather Fan (870)"
+
+
+trinket1=,id=141585,ilevel=870
+
+
+
+copy="141585_Six-Feather Fan (875)"
+
+
+trinket1=,id=141585,ilevel=875
+
+
+
+copy="141585_Six-Feather Fan (880)"
+
+
+trinket1=,id=141585,ilevel=880
+
+
+
+copy="141585_Six-Feather Fan (885)"
+
+
+trinket1=,id=141585,ilevel=885
+
+
+
+copy="141585_Six-Feather Fan (890)"
+
+
+trinket1=,id=141585,ilevel=890
+
+
+
+copy="141585_Six-Feather Fan (895)"
+
+
+trinket1=,id=141585,ilevel=895
+
+
+
+copy="141585_Six-Feather Fan (900)"
+
+
+trinket1=,id=141585,ilevel=900
+
+
+
+copy="141585_Six-Feather Fan (905)"
+
+
+trinket1=,id=141585,ilevel=905
+
+
+
+copy="141585_Six-Feather Fan (910)"
+
+
+trinket1=,id=141585,ilevel=910
+
+

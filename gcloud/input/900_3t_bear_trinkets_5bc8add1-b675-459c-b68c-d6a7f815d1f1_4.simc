@@ -1,0 +1,757 @@
+
+
+
+iterations=10000
+target_error=0.05
+
+
+optimal_raid=1
+max_time=300
+vary_combat_length=0.2
+enemy=Fluffy_Pillow
+enemy=enemy2
+enemy=enemy3
+
+output=result/900_3t_bear_trinkets5bc8add1-b675-459c-b68c-d6a7f815d1f1
+
+
+druid="Baseline"
+level=110
+race=tauren
+role=tank
+position=front
+artifact=57:0:0:0:0:948:3:949:3:950:3:951:3:952:4:953:3:954:3:955:3:956:4:957:1:958:1:959:1:960:1:961:1:962:1:979:1:1334:1:1366:1:1509:4:1510:1:1511:1:1634:1
+spec=guardian
+
+
+neck=,id=142428,stats=15464agi_5143crit_5143haste_5143mastery_5143versatility,enchant=mark_of_the_hidden_satyr
+main_hand=claws_of_ursoc,id=128821,gem_id=133686/137412/137327/0,ilevel=924
+off_hand=claws_of_ursoc,id=128822,ilevel=,ilevel=924
+
+
+talents=http://us.battle.net/wow/en/tool/talent-calculator#Uba!0000110
+
+actions.precombat=flask,type=flask_of_the_seventh_demon
+actions.precombat+=/food,type=lemon_herb_filet
+actions.precombat+=/augmentation,type=defiled
+actions.precombat+=/bear_form
+actions.precombat+=/snapshot_stats
+actions.precombat+=/potion,name=prolonged_power
+
+actions=auto_attack
+actions+=/potion,name=prolonged_power,if=buff.rage_of_the_sleeper.up
+actions+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up|!talent.brambles.enabled&equipped.144432
+actions+=/berserking,if=buff.rage_of_the_sleeper.up
+actions+=/bristling_fur,if=!buff.rage_of_the_sleeper.up
+actions+=/incarnation,if=((dot.thrash_bear.stack=5&equipped.137067)|(dot.thrash_bear.stack=3&!equipped.137067))&cooldown.thrash_bear.remains>0
+actions+=/rage_of_the_sleeper,if=buff.bear_form.up
+
+actions+=/use_item,slot=trinket1
+
+actions+=/thrash_bear
+actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up,cycle_targets=1,max_cycle_targets=2
+actions+=/mangle
+actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up|buff.galactic_guardian.up,cycle_targets=1
+actions+=/maul
+actions+=/swipe_bear
+
+
+copy="137446_Elementium Bomb Squirrel Generator (865)"
+
+
+trinket1=,id=137446,ilevel=865
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (870)"
+
+
+trinket1=,id=137446,ilevel=870
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (875)"
+
+
+trinket1=,id=137446,ilevel=875
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (880)"
+
+
+trinket1=,id=137446,ilevel=880
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (885)"
+
+
+trinket1=,id=137446,ilevel=885
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (890)"
+
+
+trinket1=,id=137446,ilevel=890
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (895)"
+
+
+trinket1=,id=137446,ilevel=895
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (900)"
+
+
+trinket1=,id=137446,ilevel=900
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (905)"
+
+
+trinket1=,id=137446,ilevel=905
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (910)"
+
+
+trinket1=,id=137446,ilevel=910
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (915)"
+
+
+trinket1=,id=137446,ilevel=915
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (920)"
+
+
+trinket1=,id=137446,ilevel=920
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (925)"
+
+
+trinket1=,id=137446,ilevel=925
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (930)"
+
+
+trinket1=,id=137446,ilevel=930
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (935)"
+
+
+trinket1=,id=137446,ilevel=935
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (940)"
+
+
+trinket1=,id=137446,ilevel=940
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (945)"
+
+
+trinket1=,id=137446,ilevel=945
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (950)"
+
+
+trinket1=,id=137446,ilevel=950
+
+
+
+copy="137446_Elementium Bomb Squirrel Generator (955)"
+
+
+trinket1=,id=137446,ilevel=955
+
+
+
+copy="137459_Chaos Talisman (865)"
+
+
+trinket1=,id=137459,ilevel=865
+
+
+
+copy="137459_Chaos Talisman (870)"
+
+
+trinket1=,id=137459,ilevel=870
+
+
+
+copy="137459_Chaos Talisman (875)"
+
+
+trinket1=,id=137459,ilevel=875
+
+
+
+copy="137459_Chaos Talisman (880)"
+
+
+trinket1=,id=137459,ilevel=880
+
+
+
+copy="137459_Chaos Talisman (885)"
+
+
+trinket1=,id=137459,ilevel=885
+
+
+
+copy="137459_Chaos Talisman (890)"
+
+
+trinket1=,id=137459,ilevel=890
+
+
+
+copy="137459_Chaos Talisman (895)"
+
+
+trinket1=,id=137459,ilevel=895
+
+
+
+copy="137459_Chaos Talisman (900)"
+
+
+trinket1=,id=137459,ilevel=900
+
+
+
+copy="137459_Chaos Talisman (905)"
+
+
+trinket1=,id=137459,ilevel=905
+
+
+
+copy="137459_Chaos Talisman (910)"
+
+
+trinket1=,id=137459,ilevel=910
+
+
+
+copy="137459_Chaos Talisman (915)"
+
+
+trinket1=,id=137459,ilevel=915
+
+
+
+copy="137459_Chaos Talisman (920)"
+
+
+trinket1=,id=137459,ilevel=920
+
+
+
+copy="137459_Chaos Talisman (925)"
+
+
+trinket1=,id=137459,ilevel=925
+
+
+
+copy="137459_Chaos Talisman (930)"
+
+
+trinket1=,id=137459,ilevel=930
+
+
+
+copy="137459_Chaos Talisman (935)"
+
+
+trinket1=,id=137459,ilevel=935
+
+
+
+copy="137459_Chaos Talisman (940)"
+
+
+trinket1=,id=137459,ilevel=940
+
+
+
+copy="137459_Chaos Talisman (945)"
+
+
+trinket1=,id=137459,ilevel=945
+
+
+
+copy="137459_Chaos Talisman (950)"
+
+
+trinket1=,id=137459,ilevel=950
+
+
+
+copy="137459_Chaos Talisman (955)"
+
+
+trinket1=,id=137459,ilevel=955
+
+
+
+copy="137486_Windscar Whetstone (865)"
+
+
+trinket1=,id=137486,ilevel=865
+
+
+
+copy="137486_Windscar Whetstone (870)"
+
+
+trinket1=,id=137486,ilevel=870
+
+
+
+copy="137486_Windscar Whetstone (875)"
+
+
+trinket1=,id=137486,ilevel=875
+
+
+
+copy="137486_Windscar Whetstone (880)"
+
+
+trinket1=,id=137486,ilevel=880
+
+
+
+copy="137486_Windscar Whetstone (885)"
+
+
+trinket1=,id=137486,ilevel=885
+
+
+
+copy="137486_Windscar Whetstone (890)"
+
+
+trinket1=,id=137486,ilevel=890
+
+
+
+copy="137486_Windscar Whetstone (895)"
+
+
+trinket1=,id=137486,ilevel=895
+
+
+
+copy="137486_Windscar Whetstone (900)"
+
+
+trinket1=,id=137486,ilevel=900
+
+
+
+copy="137486_Windscar Whetstone (905)"
+
+
+trinket1=,id=137486,ilevel=905
+
+
+
+copy="137486_Windscar Whetstone (910)"
+
+
+trinket1=,id=137486,ilevel=910
+
+
+
+copy="137486_Windscar Whetstone (915)"
+
+
+trinket1=,id=137486,ilevel=915
+
+
+
+copy="137486_Windscar Whetstone (920)"
+
+
+trinket1=,id=137486,ilevel=920
+
+
+
+copy="137486_Windscar Whetstone (925)"
+
+
+trinket1=,id=137486,ilevel=925
+
+
+
+copy="137486_Windscar Whetstone (930)"
+
+
+trinket1=,id=137486,ilevel=930
+
+
+
+copy="137486_Windscar Whetstone (935)"
+
+
+trinket1=,id=137486,ilevel=935
+
+
+
+copy="137486_Windscar Whetstone (940)"
+
+
+trinket1=,id=137486,ilevel=940
+
+
+
+copy="137486_Windscar Whetstone (945)"
+
+
+trinket1=,id=137486,ilevel=945
+
+
+
+copy="137486_Windscar Whetstone (950)"
+
+
+trinket1=,id=137486,ilevel=950
+
+
+
+copy="137486_Windscar Whetstone (955)"
+
+
+trinket1=,id=137486,ilevel=955
+
+
+
+copy="137537_Tirathon's Betrayal (865)"
+
+
+trinket1=,id=137537,ilevel=865
+
+
+
+copy="137537_Tirathon's Betrayal (870)"
+
+
+trinket1=,id=137537,ilevel=870
+
+
+
+copy="137537_Tirathon's Betrayal (875)"
+
+
+trinket1=,id=137537,ilevel=875
+
+
+
+copy="137537_Tirathon's Betrayal (880)"
+
+
+trinket1=,id=137537,ilevel=880
+
+
+
+copy="137537_Tirathon's Betrayal (885)"
+
+
+trinket1=,id=137537,ilevel=885
+
+
+
+copy="137537_Tirathon's Betrayal (890)"
+
+
+trinket1=,id=137537,ilevel=890
+
+
+
+copy="137537_Tirathon's Betrayal (895)"
+
+
+trinket1=,id=137537,ilevel=895
+
+
+
+copy="137537_Tirathon's Betrayal (900)"
+
+
+trinket1=,id=137537,ilevel=900
+
+
+
+copy="137537_Tirathon's Betrayal (905)"
+
+
+trinket1=,id=137537,ilevel=905
+
+
+
+copy="137537_Tirathon's Betrayal (910)"
+
+
+trinket1=,id=137537,ilevel=910
+
+
+
+copy="137537_Tirathon's Betrayal (915)"
+
+
+trinket1=,id=137537,ilevel=915
+
+
+
+copy="137537_Tirathon's Betrayal (920)"
+
+
+trinket1=,id=137537,ilevel=920
+
+
+
+copy="137537_Tirathon's Betrayal (925)"
+
+
+trinket1=,id=137537,ilevel=925
+
+
+
+copy="137537_Tirathon's Betrayal (930)"
+
+
+trinket1=,id=137537,ilevel=930
+
+
+
+copy="137537_Tirathon's Betrayal (935)"
+
+
+trinket1=,id=137537,ilevel=935
+
+
+
+copy="137537_Tirathon's Betrayal (940)"
+
+
+trinket1=,id=137537,ilevel=940
+
+
+
+copy="137537_Tirathon's Betrayal (945)"
+
+
+trinket1=,id=137537,ilevel=945
+
+
+
+copy="137537_Tirathon's Betrayal (950)"
+
+
+trinket1=,id=137537,ilevel=950
+
+
+
+copy="137537_Tirathon's Betrayal (955)"
+
+
+trinket1=,id=137537,ilevel=955
+
+
+
+copy="137539_Faulty Countermeasure (865)"
+
+
+trinket1=,id=137539,ilevel=865
+
+
+
+copy="137539_Faulty Countermeasure (870)"
+
+
+trinket1=,id=137539,ilevel=870
+
+
+
+copy="137539_Faulty Countermeasure (875)"
+
+
+trinket1=,id=137539,ilevel=875
+
+
+
+copy="137539_Faulty Countermeasure (880)"
+
+
+trinket1=,id=137539,ilevel=880
+
+
+
+copy="137539_Faulty Countermeasure (885)"
+
+
+trinket1=,id=137539,ilevel=885
+
+
+
+copy="137539_Faulty Countermeasure (890)"
+
+
+trinket1=,id=137539,ilevel=890
+
+
+
+copy="137539_Faulty Countermeasure (895)"
+
+
+trinket1=,id=137539,ilevel=895
+
+
+
+copy="137539_Faulty Countermeasure (900)"
+
+
+trinket1=,id=137539,ilevel=900
+
+
+
+copy="137539_Faulty Countermeasure (905)"
+
+
+trinket1=,id=137539,ilevel=905
+
+
+
+copy="137539_Faulty Countermeasure (910)"
+
+
+trinket1=,id=137539,ilevel=910
+
+
+
+copy="137539_Faulty Countermeasure (915)"
+
+
+trinket1=,id=137539,ilevel=915
+
+
+
+copy="137539_Faulty Countermeasure (920)"
+
+
+trinket1=,id=137539,ilevel=920
+
+
+
+copy="137539_Faulty Countermeasure (925)"
+
+
+trinket1=,id=137539,ilevel=925
+
+
+
+copy="137539_Faulty Countermeasure (930)"
+
+
+trinket1=,id=137539,ilevel=930
+
+
+
+copy="137539_Faulty Countermeasure (935)"
+
+
+trinket1=,id=137539,ilevel=935
+
+
+
+copy="137539_Faulty Countermeasure (940)"
+
+
+trinket1=,id=137539,ilevel=940
+
+
+
+copy="137539_Faulty Countermeasure (945)"
+
+
+trinket1=,id=137539,ilevel=945
+
+
+
+copy="137539_Faulty Countermeasure (950)"
+
+
+trinket1=,id=137539,ilevel=950
+
+
+
+copy="137539_Faulty Countermeasure (955)"
+
+
+trinket1=,id=137539,ilevel=955
+
+
+
+copy="137541_Moonlit Prism (865)"
+
+
+trinket1=,id=137541,ilevel=865
+
+
+
+copy="137541_Moonlit Prism (870)"
+
+
+trinket1=,id=137541,ilevel=870
+
+
+
+copy="137541_Moonlit Prism (875)"
+
+
+trinket1=,id=137541,ilevel=875
+
+
+
+copy="137541_Moonlit Prism (880)"
+
+
+trinket1=,id=137541,ilevel=880
+
+
+
+copy="137541_Moonlit Prism (885)"
+
+
+trinket1=,id=137541,ilevel=885
+
+

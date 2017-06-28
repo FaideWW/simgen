@@ -1,0 +1,758 @@
+
+
+
+iterations=10000
+target_error=0.05
+
+
+optimal_raid=1
+override.bloodlust=0
+
+max_time=30
+vary_combat_length=0.0
+fixed_time=1
+
+enemy=Fluffy_Pillow
+enemy=enemy2
+enemy=enemy3
+enemy=enemy4
+enemy=enemy5
+
+output=result/900_5t_incarndown_trinkets5bc8add1-b675-459c-b68c-d6a7f815d1f1
+
+
+druid="Baseline"
+level=110
+race=tauren
+role=tank
+position=front
+artifact=57:0:0:0:0:948:3:949:3:950:3:951:3:952:4:953:3:954:3:955:3:956:4:957:1:958:1:959:1:960:1:961:1:962:1:979:1:1334:1:1366:1:1509:4:1510:1:1511:1:1634:1
+spec=guardian
+
+
+neck=,id=142428,stats=15464agi_5143crit_5143haste_5143mastery_5143versatility,enchant=mark_of_the_hidden_satyr
+main_hand=claws_of_ursoc,id=128821,gem_id=133686/137412/137327/0,ilevel=924
+off_hand=claws_of_ursoc,id=128822,ilevel=,ilevel=924
+
+
+talents=http://us.battle.net/wow/en/tool/talent-calculator#Uba!0000110
+
+actions.precombat=flask,type=flask_of_the_seventh_demon
+actions.precombat+=/food,type=seedbattered_fish_plate
+actions.precombat+=/augmentation,type=defiled
+actions.precombat+=/bear_form
+actions.precombat+=/snapshot_stats
+actions.precombat+=/potion,name=prolonged_power
+
+actions=auto_attack
+actions+=/potion,name=prolonged_power,if=buff.rage_of_the_sleeper.up
+actions+=/berserking,if=buff.rage_of_the_sleeper.up
+actions+=/bristling_fur,if=buff.rage_of_the_sleeper.down
+
+actions+=/use_item,slot=trinket1
+
+actions+=/thrash_bear
+actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up&(target.time_to_die*1.6)>(16+dot.moonfire.remains),cycle_targets=1
+actions+=/maul
+actions+=/swipe_bear
+
+
+copy="134203_Stat stick (Crit) (865)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=865
+
+
+
+copy="134203_Stat stick (Crit) (870)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=870
+
+
+
+copy="134203_Stat stick (Crit) (875)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=875
+
+
+
+copy="134203_Stat stick (Crit) (880)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=880
+
+
+
+copy="134203_Stat stick (Crit) (885)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=885
+
+
+
+copy="134203_Stat stick (Crit) (890)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=890
+
+
+
+copy="134203_Stat stick (Crit) (895)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=895
+
+
+
+copy="134203_Stat stick (Crit) (900)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=900
+
+
+
+copy="134203_Stat stick (Crit) (905)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=905
+
+
+
+copy="134203_Stat stick (Crit) (910)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=910
+
+
+
+copy="134203_Stat stick (Crit) (915)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=915
+
+
+
+copy="134203_Stat stick (Crit) (920)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=920
+
+
+
+copy="134203_Stat stick (Crit) (925)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=925
+
+
+
+copy="134203_Stat stick (Crit) (930)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=930
+
+
+
+copy="134203_Stat stick (Crit) (935)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=935
+
+
+
+copy="134203_Stat stick (Crit) (940)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=940
+
+
+
+copy="134203_Stat stick (Crit) (945)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=945
+
+
+
+copy="134203_Stat stick (Crit) (950)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=950
+
+
+
+copy="134203_Stat stick (Crit) (955)"
+
+
+trinket1=,id=134203,bonus_id=603,ilevel=955
+
+
+
+copy="134203_Stat stick (Haste) (865)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=865
+
+
+
+copy="134203_Stat stick (Haste) (870)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=870
+
+
+
+copy="134203_Stat stick (Haste) (875)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=875
+
+
+
+copy="134203_Stat stick (Haste) (880)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=880
+
+
+
+copy="134203_Stat stick (Haste) (885)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=885
+
+
+
+copy="134203_Stat stick (Haste) (890)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=890
+
+
+
+copy="134203_Stat stick (Haste) (895)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=895
+
+
+
+copy="134203_Stat stick (Haste) (900)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=900
+
+
+
+copy="134203_Stat stick (Haste) (905)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=905
+
+
+
+copy="134203_Stat stick (Haste) (910)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=910
+
+
+
+copy="134203_Stat stick (Haste) (915)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=915
+
+
+
+copy="134203_Stat stick (Haste) (920)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=920
+
+
+
+copy="134203_Stat stick (Haste) (925)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=925
+
+
+
+copy="134203_Stat stick (Haste) (930)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=930
+
+
+
+copy="134203_Stat stick (Haste) (935)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=935
+
+
+
+copy="134203_Stat stick (Haste) (940)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=940
+
+
+
+copy="134203_Stat stick (Haste) (945)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=945
+
+
+
+copy="134203_Stat stick (Haste) (950)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=950
+
+
+
+copy="134203_Stat stick (Haste) (955)"
+
+
+trinket1=,id=134203,bonus_id=604,ilevel=955
+
+
+
+copy="134203_Stat stick (Mastery) (865)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=865
+
+
+
+copy="134203_Stat stick (Mastery) (870)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=870
+
+
+
+copy="134203_Stat stick (Mastery) (875)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=875
+
+
+
+copy="134203_Stat stick (Mastery) (880)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=880
+
+
+
+copy="134203_Stat stick (Mastery) (885)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=885
+
+
+
+copy="134203_Stat stick (Mastery) (890)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=890
+
+
+
+copy="134203_Stat stick (Mastery) (895)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=895
+
+
+
+copy="134203_Stat stick (Mastery) (900)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=900
+
+
+
+copy="134203_Stat stick (Mastery) (905)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=905
+
+
+
+copy="134203_Stat stick (Mastery) (910)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=910
+
+
+
+copy="134203_Stat stick (Mastery) (915)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=915
+
+
+
+copy="134203_Stat stick (Mastery) (920)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=920
+
+
+
+copy="134203_Stat stick (Mastery) (925)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=925
+
+
+
+copy="134203_Stat stick (Mastery) (930)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=930
+
+
+
+copy="134203_Stat stick (Mastery) (935)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=935
+
+
+
+copy="134203_Stat stick (Mastery) (940)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=940
+
+
+
+copy="134203_Stat stick (Mastery) (945)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=945
+
+
+
+copy="134203_Stat stick (Mastery) (950)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=950
+
+
+
+copy="134203_Stat stick (Mastery) (955)"
+
+
+trinket1=,id=134203,bonus_id=605,ilevel=955
+
+
+
+copy="134203_Stat stick (Versatility) (865)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=865
+
+
+
+copy="134203_Stat stick (Versatility) (870)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=870
+
+
+
+copy="134203_Stat stick (Versatility) (875)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=875
+
+
+
+copy="134203_Stat stick (Versatility) (880)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=880
+
+
+
+copy="134203_Stat stick (Versatility) (885)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=885
+
+
+
+copy="134203_Stat stick (Versatility) (890)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=890
+
+
+
+copy="134203_Stat stick (Versatility) (895)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=895
+
+
+
+copy="134203_Stat stick (Versatility) (900)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=900
+
+
+
+copy="134203_Stat stick (Versatility) (905)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=905
+
+
+
+copy="134203_Stat stick (Versatility) (910)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=910
+
+
+
+copy="134203_Stat stick (Versatility) (915)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=915
+
+
+
+copy="134203_Stat stick (Versatility) (920)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=920
+
+
+
+copy="134203_Stat stick (Versatility) (925)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=925
+
+
+
+copy="134203_Stat stick (Versatility) (930)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=930
+
+
+
+copy="134203_Stat stick (Versatility) (935)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=935
+
+
+
+copy="134203_Stat stick (Versatility) (940)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=940
+
+
+
+copy="134203_Stat stick (Versatility) (945)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=945
+
+
+
+copy="134203_Stat stick (Versatility) (950)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=950
+
+
+
+copy="134203_Stat stick (Versatility) (955)"
+
+
+trinket1=,id=134203,bonus_id=607,ilevel=955
+
+
+
+copy="140806_Stat stick (No secondary) (865)"
+
+
+trinket1=,id=140806,ilevel=865
+
+
+
+copy="140806_Stat stick (No secondary) (870)"
+
+
+trinket1=,id=140806,ilevel=870
+
+
+
+copy="140806_Stat stick (No secondary) (875)"
+
+
+trinket1=,id=140806,ilevel=875
+
+
+
+copy="140806_Stat stick (No secondary) (880)"
+
+
+trinket1=,id=140806,ilevel=880
+
+
+
+copy="140806_Stat stick (No secondary) (885)"
+
+
+trinket1=,id=140806,ilevel=885
+
+
+
+copy="140806_Stat stick (No secondary) (890)"
+
+
+trinket1=,id=140806,ilevel=890
+
+
+
+copy="140806_Stat stick (No secondary) (895)"
+
+
+trinket1=,id=140806,ilevel=895
+
+
+
+copy="140806_Stat stick (No secondary) (900)"
+
+
+trinket1=,id=140806,ilevel=900
+
+
+
+copy="140806_Stat stick (No secondary) (905)"
+
+
+trinket1=,id=140806,ilevel=905
+
+
+
+copy="140806_Stat stick (No secondary) (910)"
+
+
+trinket1=,id=140806,ilevel=910
+
+
+
+copy="140806_Stat stick (No secondary) (915)"
+
+
+trinket1=,id=140806,ilevel=915
+
+
+
+copy="140806_Stat stick (No secondary) (920)"
+
+
+trinket1=,id=140806,ilevel=920
+
+
+
+copy="140806_Stat stick (No secondary) (925)"
+
+
+trinket1=,id=140806,ilevel=925
+
+
+
+copy="140806_Stat stick (No secondary) (930)"
+
+
+trinket1=,id=140806,ilevel=930
+
+
+
+copy="140806_Stat stick (No secondary) (935)"
+
+
+trinket1=,id=140806,ilevel=935
+
+
+
+copy="140806_Stat stick (No secondary) (940)"
+
+
+trinket1=,id=140806,ilevel=940
+
+
+
+copy="140806_Stat stick (No secondary) (945)"
+
+
+trinket1=,id=140806,ilevel=945
+
+
+
+copy="140806_Stat stick (No secondary) (950)"
+
+
+trinket1=,id=140806,ilevel=950
+
+
+
+copy="140806_Stat stick (No secondary) (955)"
+
+
+trinket1=,id=140806,ilevel=955
+
+
+
+copy="128705_Darkmoon Deck: Dominion (875)"
+
+
+trinket1=,id=128705,ilevel=875
+
+
+
+copy="133641_Eye of Skovald (865)"
+
+
+trinket1=,id=133641,ilevel=865
+
+
+
+copy="133641_Eye of Skovald (870)"
+
+
+trinket1=,id=133641,ilevel=870
+
+
+
+copy="133641_Eye of Skovald (875)"
+
+
+trinket1=,id=133641,ilevel=875
+
+
+
+copy="133641_Eye of Skovald (880)"
+
+
+trinket1=,id=133641,ilevel=880
+
+

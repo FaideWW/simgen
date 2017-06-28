@@ -1,0 +1,757 @@
+
+
+
+iterations=10000
+target_error=0.05
+
+
+optimal_raid=1
+max_time=300
+vary_combat_length=0.2
+enemy=Fluffy_Pillow
+enemy=enemy2
+enemy=enemy3
+
+output=result/920_3t_bear_trinkets3caac6d2-f751-44f7-ba65-95f22300851f
+
+
+druid="Baseline"
+level=110
+race=tauren
+role=tank
+position=front
+artifact=57:0:0:0:0:948:3:949:3:950:3:951:3:952:4:953:3:954:3:955:3:956:4:957:1:958:1:959:1:960:1:961:1:962:1:979:1:1334:1:1366:1:1509:4:1510:1:1511:1:1634:1
+spec=guardian
+
+
+neck=,id=142428,stats=18626agi_5653crit_5653haste_5653mastery_5653versatility,enchant=mark_of_the_hidden_satyr
+main_hand=claws_of_ursoc,id=128821,gem_id=133686/137412/137327/0,ilevel=942
+off_hand=claws_of_ursoc,id=128822,ilevel=,ilevel=942
+
+
+talents=http://us.battle.net/wow/en/tool/talent-calculator#Uba!0000110
+
+actions.precombat=flask,type=flask_of_the_seventh_demon
+actions.precombat+=/food,type=lemon_herb_filet
+actions.precombat+=/augmentation,type=defiled
+actions.precombat+=/bear_form
+actions.precombat+=/snapshot_stats
+actions.precombat+=/potion,name=prolonged_power
+
+actions=auto_attack
+actions+=/potion,name=prolonged_power,if=buff.rage_of_the_sleeper.up
+actions+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up|!talent.brambles.enabled&equipped.144432
+actions+=/berserking,if=buff.rage_of_the_sleeper.up
+actions+=/bristling_fur,if=!buff.rage_of_the_sleeper.up
+actions+=/incarnation,if=((dot.thrash_bear.stack=5&equipped.137067)|(dot.thrash_bear.stack=3&!equipped.137067))&cooldown.thrash_bear.remains>0
+actions+=/rage_of_the_sleeper,if=buff.bear_form.up
+
+actions+=/use_item,slot=trinket1
+
+actions+=/thrash_bear
+actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up,cycle_targets=1,max_cycle_targets=2
+actions+=/mangle
+actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up|buff.galactic_guardian.up,cycle_targets=1
+actions+=/maul
+actions+=/swipe_bear
+
+
+copy="147010_Cradle of Anguish (930)"
+
+
+trinket1=,id=147010,ilevel=930
+
+
+
+copy="147010_Cradle of Anguish (935)"
+
+
+trinket1=,id=147010,ilevel=935
+
+
+
+copy="147010_Cradle of Anguish (940)"
+
+
+trinket1=,id=147010,ilevel=940
+
+
+
+copy="147010_Cradle of Anguish (945)"
+
+
+trinket1=,id=147010,ilevel=945
+
+
+
+copy="147010_Cradle of Anguish (950)"
+
+
+trinket1=,id=147010,ilevel=950
+
+
+
+copy="147010_Cradle of Anguish (955)"
+
+
+trinket1=,id=147010,ilevel=955
+
+
+
+copy="147015_Engine of Eradication (900)"
+
+
+trinket1=,id=147015,ilevel=900
+
+
+
+copy="147015_Engine of Eradication (905)"
+
+
+trinket1=,id=147015,ilevel=905
+
+
+
+copy="147015_Engine of Eradication (910)"
+
+
+trinket1=,id=147015,ilevel=910
+
+
+
+copy="147015_Engine of Eradication (915)"
+
+
+trinket1=,id=147015,ilevel=915
+
+
+
+copy="147015_Engine of Eradication (920)"
+
+
+trinket1=,id=147015,ilevel=920
+
+
+
+copy="147015_Engine of Eradication (925)"
+
+
+trinket1=,id=147015,ilevel=925
+
+
+
+copy="147015_Engine of Eradication (930)"
+
+
+trinket1=,id=147015,ilevel=930
+
+
+
+copy="147015_Engine of Eradication (935)"
+
+
+trinket1=,id=147015,ilevel=935
+
+
+
+copy="147015_Engine of Eradication (940)"
+
+
+trinket1=,id=147015,ilevel=940
+
+
+
+copy="147015_Engine of Eradication (945)"
+
+
+trinket1=,id=147015,ilevel=945
+
+
+
+copy="147015_Engine of Eradication (950)"
+
+
+trinket1=,id=147015,ilevel=950
+
+
+
+copy="147015_Engine of Eradication (955)"
+
+
+trinket1=,id=147015,ilevel=955
+
+
+
+copy="147009_Infernal Cinders (900)"
+
+
+trinket1=,id=147009,ilevel=900
+
+
+
+copy="147009_Infernal Cinders (905)"
+
+
+trinket1=,id=147009,ilevel=905
+
+
+
+copy="147009_Infernal Cinders (910)"
+
+
+trinket1=,id=147009,ilevel=910
+
+
+
+copy="147009_Infernal Cinders (915)"
+
+
+trinket1=,id=147009,ilevel=915
+
+
+
+copy="147009_Infernal Cinders (920)"
+
+
+trinket1=,id=147009,ilevel=920
+
+
+
+copy="147009_Infernal Cinders (925)"
+
+
+trinket1=,id=147009,ilevel=925
+
+
+
+copy="147009_Infernal Cinders (930)"
+
+
+trinket1=,id=147009,ilevel=930
+
+
+
+copy="147009_Infernal Cinders (935)"
+
+
+trinket1=,id=147009,ilevel=935
+
+
+
+copy="147009_Infernal Cinders (940)"
+
+
+trinket1=,id=147009,ilevel=940
+
+
+
+copy="147009_Infernal Cinders (945)"
+
+
+trinket1=,id=147009,ilevel=945
+
+
+
+copy="147009_Infernal Cinders (950)"
+
+
+trinket1=,id=147009,ilevel=950
+
+
+
+copy="147009_Infernal Cinders (955)"
+
+
+trinket1=,id=147009,ilevel=955
+
+
+
+copy="151190_Specter of Betrayal (900)"
+
+
+trinket1=,id=151190,ilevel=900
+
+
+
+copy="151190_Specter of Betrayal (905)"
+
+
+trinket1=,id=151190,ilevel=905
+
+
+
+copy="151190_Specter of Betrayal (910)"
+
+
+trinket1=,id=151190,ilevel=910
+
+
+
+copy="151190_Specter of Betrayal (915)"
+
+
+trinket1=,id=151190,ilevel=915
+
+
+
+copy="151190_Specter of Betrayal (920)"
+
+
+trinket1=,id=151190,ilevel=920
+
+
+
+copy="151190_Specter of Betrayal (925)"
+
+
+trinket1=,id=151190,ilevel=925
+
+
+
+copy="151190_Specter of Betrayal (930)"
+
+
+trinket1=,id=151190,ilevel=930
+
+
+
+copy="151190_Specter of Betrayal (935)"
+
+
+trinket1=,id=151190,ilevel=935
+
+
+
+copy="151190_Specter of Betrayal (940)"
+
+
+trinket1=,id=151190,ilevel=940
+
+
+
+copy="151190_Specter of Betrayal (945)"
+
+
+trinket1=,id=151190,ilevel=945
+
+
+
+copy="151190_Specter of Betrayal (950)"
+
+
+trinket1=,id=151190,ilevel=950
+
+
+
+copy="151190_Specter of Betrayal (955)"
+
+
+trinket1=,id=151190,ilevel=955
+
+
+
+copy="147018_Spectral Thurible (900)"
+
+
+trinket1=,id=147018,ilevel=900
+
+
+
+copy="147018_Spectral Thurible (905)"
+
+
+trinket1=,id=147018,ilevel=905
+
+
+
+copy="147018_Spectral Thurible (910)"
+
+
+trinket1=,id=147018,ilevel=910
+
+
+
+copy="147018_Spectral Thurible (915)"
+
+
+trinket1=,id=147018,ilevel=915
+
+
+
+copy="147018_Spectral Thurible (920)"
+
+
+trinket1=,id=147018,ilevel=920
+
+
+
+copy="147018_Spectral Thurible (925)"
+
+
+trinket1=,id=147018,ilevel=925
+
+
+
+copy="147018_Spectral Thurible (930)"
+
+
+trinket1=,id=147018,ilevel=930
+
+
+
+copy="147018_Spectral Thurible (935)"
+
+
+trinket1=,id=147018,ilevel=935
+
+
+
+copy="147018_Spectral Thurible (940)"
+
+
+trinket1=,id=147018,ilevel=940
+
+
+
+copy="147018_Spectral Thurible (945)"
+
+
+trinket1=,id=147018,ilevel=945
+
+
+
+copy="147018_Spectral Thurible (950)"
+
+
+trinket1=,id=147018,ilevel=950
+
+
+
+copy="147018_Spectral Thurible (955)"
+
+
+trinket1=,id=147018,ilevel=955
+
+
+
+copy="147017_Tarnished Sentinel Medallion (900)"
+
+
+trinket1=,id=147017,ilevel=900
+
+
+
+copy="147017_Tarnished Sentinel Medallion (905)"
+
+
+trinket1=,id=147017,ilevel=905
+
+
+
+copy="147017_Tarnished Sentinel Medallion (910)"
+
+
+trinket1=,id=147017,ilevel=910
+
+
+
+copy="147017_Tarnished Sentinel Medallion (915)"
+
+
+trinket1=,id=147017,ilevel=915
+
+
+
+copy="147017_Tarnished Sentinel Medallion (920)"
+
+
+trinket1=,id=147017,ilevel=920
+
+
+
+copy="147017_Tarnished Sentinel Medallion (925)"
+
+
+trinket1=,id=147017,ilevel=925
+
+
+
+copy="147017_Tarnished Sentinel Medallion (930)"
+
+
+trinket1=,id=147017,ilevel=930
+
+
+
+copy="147017_Tarnished Sentinel Medallion (935)"
+
+
+trinket1=,id=147017,ilevel=935
+
+
+
+copy="147017_Tarnished Sentinel Medallion (940)"
+
+
+trinket1=,id=147017,ilevel=940
+
+
+
+copy="147017_Tarnished Sentinel Medallion (945)"
+
+
+trinket1=,id=147017,ilevel=945
+
+
+
+copy="147017_Tarnished Sentinel Medallion (950)"
+
+
+trinket1=,id=147017,ilevel=950
+
+
+
+copy="147017_Tarnished Sentinel Medallion (955)"
+
+
+trinket1=,id=147017,ilevel=955
+
+
+
+copy="147016_Terror From Below (900)"
+
+
+trinket1=,id=147016,ilevel=900
+
+
+
+copy="147016_Terror From Below (905)"
+
+
+trinket1=,id=147016,ilevel=905
+
+
+
+copy="147016_Terror From Below (910)"
+
+
+trinket1=,id=147016,ilevel=910
+
+
+
+copy="147016_Terror From Below (915)"
+
+
+trinket1=,id=147016,ilevel=915
+
+
+
+copy="147016_Terror From Below (920)"
+
+
+trinket1=,id=147016,ilevel=920
+
+
+
+copy="147016_Terror From Below (925)"
+
+
+trinket1=,id=147016,ilevel=925
+
+
+
+copy="147016_Terror From Below (930)"
+
+
+trinket1=,id=147016,ilevel=930
+
+
+
+copy="147016_Terror From Below (935)"
+
+
+trinket1=,id=147016,ilevel=935
+
+
+
+copy="147016_Terror From Below (940)"
+
+
+trinket1=,id=147016,ilevel=940
+
+
+
+copy="147016_Terror From Below (945)"
+
+
+trinket1=,id=147016,ilevel=945
+
+
+
+copy="147016_Terror From Below (950)"
+
+
+trinket1=,id=147016,ilevel=950
+
+
+
+copy="147016_Terror From Below (955)"
+
+
+trinket1=,id=147016,ilevel=955
+
+
+
+copy="147019_Tome of Unraveling Sanity (900)"
+
+
+trinket1=,id=147019,ilevel=900
+
+
+
+copy="147019_Tome of Unraveling Sanity (905)"
+
+
+trinket1=,id=147019,ilevel=905
+
+
+
+copy="147019_Tome of Unraveling Sanity (910)"
+
+
+trinket1=,id=147019,ilevel=910
+
+
+
+copy="147019_Tome of Unraveling Sanity (915)"
+
+
+trinket1=,id=147019,ilevel=915
+
+
+
+copy="147019_Tome of Unraveling Sanity (920)"
+
+
+trinket1=,id=147019,ilevel=920
+
+
+
+copy="147019_Tome of Unraveling Sanity (925)"
+
+
+trinket1=,id=147019,ilevel=925
+
+
+
+copy="147019_Tome of Unraveling Sanity (930)"
+
+
+trinket1=,id=147019,ilevel=930
+
+
+
+copy="147019_Tome of Unraveling Sanity (935)"
+
+
+trinket1=,id=147019,ilevel=935
+
+
+
+copy="147019_Tome of Unraveling Sanity (940)"
+
+
+trinket1=,id=147019,ilevel=940
+
+
+
+copy="147019_Tome of Unraveling Sanity (945)"
+
+
+trinket1=,id=147019,ilevel=945
+
+
+
+copy="147019_Tome of Unraveling Sanity (950)"
+
+
+trinket1=,id=147019,ilevel=950
+
+
+
+copy="147019_Tome of Unraveling Sanity (955)"
+
+
+trinket1=,id=147019,ilevel=955
+
+
+
+copy="147012_Umbral Moonglaives (900)"
+
+
+trinket1=,id=147012,ilevel=900
+
+
+
+copy="147012_Umbral Moonglaives (905)"
+
+
+trinket1=,id=147012,ilevel=905
+
+
+
+copy="147012_Umbral Moonglaives (910)"
+
+
+trinket1=,id=147012,ilevel=910
+
+
+
+copy="147012_Umbral Moonglaives (915)"
+
+
+trinket1=,id=147012,ilevel=915
+
+
+
+copy="147012_Umbral Moonglaives (920)"
+
+
+trinket1=,id=147012,ilevel=920
+
+
+
+copy="147012_Umbral Moonglaives (925)"
+
+
+trinket1=,id=147012,ilevel=925
+
+
+
+copy="147012_Umbral Moonglaives (930)"
+
+
+trinket1=,id=147012,ilevel=930
+
+
+
+copy="147012_Umbral Moonglaives (935)"
+
+
+trinket1=,id=147012,ilevel=935
+
+
+
+copy="147012_Umbral Moonglaives (940)"
+
+
+trinket1=,id=147012,ilevel=940
+
+
+
+copy="147012_Umbral Moonglaives (945)"
+
+
+trinket1=,id=147012,ilevel=945
+
+

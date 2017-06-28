@@ -1,0 +1,762 @@
+
+
+
+iterations=10000
+target_error=0.05
+
+
+optimal_raid=1
+override.bloodlust=0
+
+max_time=30
+vary_combat_length=0.0
+fixed_time=1
+
+enemy=Fluffy_Pillow
+enemy=enemy2
+enemy=enemy3
+enemy=enemy4
+enemy=enemy5
+
+output=result/920_5t_incarnup_trinkets3caac6d2-f751-44f7-ba65-95f22300851f
+
+
+druid="Baseline"
+level=110
+race=tauren
+role=tank
+position=front
+artifact=57:0:0:0:0:948:3:949:3:950:3:951:3:952:4:953:3:954:3:955:3:956:4:957:1:958:1:959:1:960:1:961:1:962:1:979:1:1334:1:1366:1:1509:4:1510:1:1511:1:1634:1
+spec=guardian
+
+
+neck=,id=142428,stats=18626agi_5653crit_5653haste_5653mastery_5653versatility,enchant=mark_of_the_hidden_satyr
+main_hand=claws_of_ursoc,id=128821,gem_id=133686/137412/137327/0,ilevel=942
+off_hand=claws_of_ursoc,id=128822,ilevel=,ilevel=942
+
+
+talents=http://us.battle.net/wow/en/tool/talent-calculator#Uba!0000110
+
+actions.precombat=flask,type=flask_of_the_seventh_demon
+actions.precombat+=/food,type=seedbattered_fish_plate
+actions.precombat+=/augmentation,type=defiled
+actions.precombat+=/bear_form
+actions.precombat+=/snapshot_stats
+actions.precombat+=/potion,name=prolonged_power
+
+actions=auto_attack
+actions+=/potion,name=prolonged_power,if=buff.rage_of_the_sleeper.up
+actions+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up
+actions+=/berserking,if=buff.rage_of_the_sleeper.up
+actions+=/bristling_fur,if=buff.rage_of_the_sleeper.down
+actions+=/lunar_beam,if=buff.rage_of_the_sleeper.up
+actions+=/incarnation,if=cooldown.thrash_bear.remains>0
+actions+=/rage_of_the_sleeper,if=buff.bear_form.up
+
+actions+=/use_item,slot=trinket1
+
+actions+=/thrash_bear
+actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up,cycle_targets=1
+actions+=/maul
+actions+=/swipe_bear
+
+
+copy="140796_Entwined Elemental Foci (870)"
+
+
+trinket1=,id=140796,ilevel=870
+
+
+
+copy="140796_Entwined Elemental Foci (875)"
+
+
+trinket1=,id=140796,ilevel=875
+
+
+
+copy="140796_Entwined Elemental Foci (880)"
+
+
+trinket1=,id=140796,ilevel=880
+
+
+
+copy="140796_Entwined Elemental Foci (885)"
+
+
+trinket1=,id=140796,ilevel=885
+
+
+
+copy="140796_Entwined Elemental Foci (890)"
+
+
+trinket1=,id=140796,ilevel=890
+
+
+
+copy="140796_Entwined Elemental Foci (895)"
+
+
+trinket1=,id=140796,ilevel=895
+
+
+
+copy="140796_Entwined Elemental Foci (900)"
+
+
+trinket1=,id=140796,ilevel=900
+
+
+
+copy="140796_Entwined Elemental Foci (905)"
+
+
+trinket1=,id=140796,ilevel=905
+
+
+
+copy="140796_Entwined Elemental Foci (910)"
+
+
+trinket1=,id=140796,ilevel=910
+
+
+
+copy="140796_Entwined Elemental Foci (915)"
+
+
+trinket1=,id=140796,ilevel=915
+
+
+
+copy="140796_Entwined Elemental Foci (920)"
+
+
+trinket1=,id=140796,ilevel=920
+
+
+
+copy="140796_Entwined Elemental Foci (925)"
+
+
+trinket1=,id=140796,ilevel=925
+
+
+
+copy="140796_Entwined Elemental Foci (930)"
+
+
+trinket1=,id=140796,ilevel=930
+
+
+
+copy="140796_Entwined Elemental Foci (935)"
+
+
+trinket1=,id=140796,ilevel=935
+
+
+
+copy="140796_Entwined Elemental Foci (940)"
+
+
+trinket1=,id=140796,ilevel=940
+
+
+
+copy="140796_Entwined Elemental Foci (945)"
+
+
+trinket1=,id=140796,ilevel=945
+
+
+
+copy="140796_Entwined Elemental Foci (950)"
+
+
+trinket1=,id=140796,ilevel=950
+
+
+
+copy="140796_Entwined Elemental Foci (955)"
+
+
+trinket1=,id=140796,ilevel=955
+
+
+
+copy="140798_Icon of Rot (865)"
+
+
+trinket1=,id=140798,ilevel=865
+
+
+
+copy="140798_Icon of Rot (870)"
+
+
+trinket1=,id=140798,ilevel=870
+
+
+
+copy="140798_Icon of Rot (875)"
+
+
+trinket1=,id=140798,ilevel=875
+
+
+
+copy="140798_Icon of Rot (880)"
+
+
+trinket1=,id=140798,ilevel=880
+
+
+
+copy="140798_Icon of Rot (885)"
+
+
+trinket1=,id=140798,ilevel=885
+
+
+
+copy="140798_Icon of Rot (890)"
+
+
+trinket1=,id=140798,ilevel=890
+
+
+
+copy="140798_Icon of Rot (895)"
+
+
+trinket1=,id=140798,ilevel=895
+
+
+
+copy="140798_Icon of Rot (900)"
+
+
+trinket1=,id=140798,ilevel=900
+
+
+
+copy="140798_Icon of Rot (905)"
+
+
+trinket1=,id=140798,ilevel=905
+
+
+
+copy="140798_Icon of Rot (910)"
+
+
+trinket1=,id=140798,ilevel=910
+
+
+
+copy="140798_Icon of Rot (915)"
+
+
+trinket1=,id=140798,ilevel=915
+
+
+
+copy="140798_Icon of Rot (920)"
+
+
+trinket1=,id=140798,ilevel=920
+
+
+
+copy="140798_Icon of Rot (925)"
+
+
+trinket1=,id=140798,ilevel=925
+
+
+
+copy="140798_Icon of Rot (930)"
+
+
+trinket1=,id=140798,ilevel=930
+
+
+
+copy="140798_Icon of Rot (935)"
+
+
+trinket1=,id=140798,ilevel=935
+
+
+
+copy="140798_Icon of Rot (940)"
+
+
+trinket1=,id=140798,ilevel=940
+
+
+
+copy="140798_Icon of Rot (945)"
+
+
+trinket1=,id=140798,ilevel=945
+
+
+
+copy="140798_Icon of Rot (950)"
+
+
+trinket1=,id=140798,ilevel=950
+
+
+
+copy="140798_Icon of Rot (955)"
+
+
+trinket1=,id=140798,ilevel=955
+
+
+
+copy="140801_Fury of the Burning Sky (865)"
+
+
+trinket1=,id=140801,ilevel=865
+
+
+
+copy="140801_Fury of the Burning Sky (870)"
+
+
+trinket1=,id=140801,ilevel=870
+
+
+
+copy="140801_Fury of the Burning Sky (875)"
+
+
+trinket1=,id=140801,ilevel=875
+
+
+
+copy="140801_Fury of the Burning Sky (880)"
+
+
+trinket1=,id=140801,ilevel=880
+
+
+
+copy="140801_Fury of the Burning Sky (885)"
+
+
+trinket1=,id=140801,ilevel=885
+
+
+
+copy="140801_Fury of the Burning Sky (890)"
+
+
+trinket1=,id=140801,ilevel=890
+
+
+
+copy="140801_Fury of the Burning Sky (895)"
+
+
+trinket1=,id=140801,ilevel=895
+
+
+
+copy="140801_Fury of the Burning Sky (900)"
+
+
+trinket1=,id=140801,ilevel=900
+
+
+
+copy="140801_Fury of the Burning Sky (905)"
+
+
+trinket1=,id=140801,ilevel=905
+
+
+
+copy="140801_Fury of the Burning Sky (910)"
+
+
+trinket1=,id=140801,ilevel=910
+
+
+
+copy="140801_Fury of the Burning Sky (915)"
+
+
+trinket1=,id=140801,ilevel=915
+
+
+
+copy="140801_Fury of the Burning Sky (920)"
+
+
+trinket1=,id=140801,ilevel=920
+
+
+
+copy="140801_Fury of the Burning Sky (925)"
+
+
+trinket1=,id=140801,ilevel=925
+
+
+
+copy="140801_Fury of the Burning Sky (930)"
+
+
+trinket1=,id=140801,ilevel=930
+
+
+
+copy="140801_Fury of the Burning Sky (935)"
+
+
+trinket1=,id=140801,ilevel=935
+
+
+
+copy="140801_Fury of the Burning Sky (940)"
+
+
+trinket1=,id=140801,ilevel=940
+
+
+
+copy="140801_Fury of the Burning Sky (945)"
+
+
+trinket1=,id=140801,ilevel=945
+
+
+
+copy="140801_Fury of the Burning Sky (950)"
+
+
+trinket1=,id=140801,ilevel=950
+
+
+
+copy="140801_Fury of the Burning Sky (955)"
+
+
+trinket1=,id=140801,ilevel=955
+
+
+
+copy="140802_Nightblooming Frond (865)"
+
+
+trinket1=,id=140802,ilevel=865
+
+
+
+copy="140802_Nightblooming Frond (870)"
+
+
+trinket1=,id=140802,ilevel=870
+
+
+
+copy="140802_Nightblooming Frond (875)"
+
+
+trinket1=,id=140802,ilevel=875
+
+
+
+copy="140802_Nightblooming Frond (880)"
+
+
+trinket1=,id=140802,ilevel=880
+
+
+
+copy="140802_Nightblooming Frond (885)"
+
+
+trinket1=,id=140802,ilevel=885
+
+
+
+copy="140802_Nightblooming Frond (890)"
+
+
+trinket1=,id=140802,ilevel=890
+
+
+
+copy="140802_Nightblooming Frond (895)"
+
+
+trinket1=,id=140802,ilevel=895
+
+
+
+copy="140802_Nightblooming Frond (900)"
+
+
+trinket1=,id=140802,ilevel=900
+
+
+
+copy="140802_Nightblooming Frond (905)"
+
+
+trinket1=,id=140802,ilevel=905
+
+
+
+copy="140802_Nightblooming Frond (910)"
+
+
+trinket1=,id=140802,ilevel=910
+
+
+
+copy="140802_Nightblooming Frond (915)"
+
+
+trinket1=,id=140802,ilevel=915
+
+
+
+copy="140802_Nightblooming Frond (920)"
+
+
+trinket1=,id=140802,ilevel=920
+
+
+
+copy="140802_Nightblooming Frond (925)"
+
+
+trinket1=,id=140802,ilevel=925
+
+
+
+copy="140802_Nightblooming Frond (930)"
+
+
+trinket1=,id=140802,ilevel=930
+
+
+
+copy="140802_Nightblooming Frond (935)"
+
+
+trinket1=,id=140802,ilevel=935
+
+
+
+copy="140802_Nightblooming Frond (940)"
+
+
+trinket1=,id=140802,ilevel=940
+
+
+
+copy="140802_Nightblooming Frond (945)"
+
+
+trinket1=,id=140802,ilevel=945
+
+
+
+copy="140802_Nightblooming Frond (950)"
+
+
+trinket1=,id=140802,ilevel=950
+
+
+
+copy="140802_Nightblooming Frond (955)"
+
+
+trinket1=,id=140802,ilevel=955
+
+
+
+copy="140808_Draught of Souls (865)"
+
+
+trinket1=,id=140808,ilevel=865
+
+
+
+copy="140808_Draught of Souls (870)"
+
+
+trinket1=,id=140808,ilevel=870
+
+
+
+copy="140808_Draught of Souls (875)"
+
+
+trinket1=,id=140808,ilevel=875
+
+
+
+copy="140808_Draught of Souls (880)"
+
+
+trinket1=,id=140808,ilevel=880
+
+
+
+copy="140808_Draught of Souls (885)"
+
+
+trinket1=,id=140808,ilevel=885
+
+
+
+copy="140808_Draught of Souls (890)"
+
+
+trinket1=,id=140808,ilevel=890
+
+
+
+copy="140808_Draught of Souls (895)"
+
+
+trinket1=,id=140808,ilevel=895
+
+
+
+copy="140808_Draught of Souls (900)"
+
+
+trinket1=,id=140808,ilevel=900
+
+
+
+copy="140808_Draught of Souls (905)"
+
+
+trinket1=,id=140808,ilevel=905
+
+
+
+copy="140808_Draught of Souls (910)"
+
+
+trinket1=,id=140808,ilevel=910
+
+
+
+copy="140808_Draught of Souls (915)"
+
+
+trinket1=,id=140808,ilevel=915
+
+
+
+copy="140808_Draught of Souls (920)"
+
+
+trinket1=,id=140808,ilevel=920
+
+
+
+copy="140808_Draught of Souls (925)"
+
+
+trinket1=,id=140808,ilevel=925
+
+
+
+copy="140808_Draught of Souls (930)"
+
+
+trinket1=,id=140808,ilevel=930
+
+
+
+copy="140808_Draught of Souls (935)"
+
+
+trinket1=,id=140808,ilevel=935
+
+
+
+copy="140808_Draught of Souls (940)"
+
+
+trinket1=,id=140808,ilevel=940
+
+
+
+copy="140808_Draught of Souls (945)"
+
+
+trinket1=,id=140808,ilevel=945
+
+
+
+copy="140808_Draught of Souls (950)"
+
+
+trinket1=,id=140808,ilevel=950
+
+
+
+copy="140808_Draught of Souls (955)"
+
+
+trinket1=,id=140808,ilevel=955
+
+
+
+copy="147010_Cradle of Anguish (900)"
+
+
+trinket1=,id=147010,ilevel=900
+
+
+
+copy="147010_Cradle of Anguish (905)"
+
+
+trinket1=,id=147010,ilevel=905
+
+
+
+copy="147010_Cradle of Anguish (910)"
+
+
+trinket1=,id=147010,ilevel=910
+
+
+
+copy="147010_Cradle of Anguish (915)"
+
+
+trinket1=,id=147010,ilevel=915
+
+
+
+copy="147010_Cradle of Anguish (920)"
+
+
+trinket1=,id=147010,ilevel=920
+
+
+
+copy="147010_Cradle of Anguish (925)"
+
+
+trinket1=,id=147010,ilevel=925
+
+

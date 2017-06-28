@@ -1,0 +1,762 @@
+
+
+
+iterations=10000
+target_error=0.05
+
+
+optimal_raid=1
+override.bloodlust=0
+
+max_time=30
+vary_combat_length=0.0
+fixed_time=1
+
+enemy=Fluffy_Pillow
+enemy=enemy2
+enemy=enemy3
+enemy=enemy4
+enemy=enemy5
+
+output=result/900_5t_incarnup_trinkets5bc8add1-b675-459c-b68c-d6a7f815d1f1
+
+
+druid="Baseline"
+level=110
+race=tauren
+role=tank
+position=front
+artifact=57:0:0:0:0:948:3:949:3:950:3:951:3:952:4:953:3:954:3:955:3:956:4:957:1:958:1:959:1:960:1:961:1:962:1:979:1:1334:1:1366:1:1509:4:1510:1:1511:1:1634:1
+spec=guardian
+
+
+neck=,id=142428,stats=15464agi_5143crit_5143haste_5143mastery_5143versatility,enchant=mark_of_the_hidden_satyr
+main_hand=claws_of_ursoc,id=128821,gem_id=133686/137412/137327/0,ilevel=924
+off_hand=claws_of_ursoc,id=128822,ilevel=,ilevel=924
+
+
+talents=http://us.battle.net/wow/en/tool/talent-calculator#Uba!0000110
+
+actions.precombat=flask,type=flask_of_the_seventh_demon
+actions.precombat+=/food,type=seedbattered_fish_plate
+actions.precombat+=/augmentation,type=defiled
+actions.precombat+=/bear_form
+actions.precombat+=/snapshot_stats
+actions.precombat+=/potion,name=prolonged_power
+
+actions=auto_attack
+actions+=/potion,name=prolonged_power,if=buff.rage_of_the_sleeper.up
+actions+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up
+actions+=/berserking,if=buff.rage_of_the_sleeper.up
+actions+=/bristling_fur,if=buff.rage_of_the_sleeper.down
+actions+=/lunar_beam,if=buff.rage_of_the_sleeper.up
+actions+=/incarnation,if=cooldown.thrash_bear.remains>0
+actions+=/rage_of_the_sleeper,if=buff.bear_form.up
+
+actions+=/use_item,slot=trinket1
+
+actions+=/thrash_bear
+actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up,cycle_targets=1
+actions+=/maul
+actions+=/swipe_bear
+
+
+copy="137541_Moonlit Prism (890)"
+
+
+trinket1=,id=137541,ilevel=890
+
+
+
+copy="137541_Moonlit Prism (895)"
+
+
+trinket1=,id=137541,ilevel=895
+
+
+
+copy="137541_Moonlit Prism (900)"
+
+
+trinket1=,id=137541,ilevel=900
+
+
+
+copy="137541_Moonlit Prism (905)"
+
+
+trinket1=,id=137541,ilevel=905
+
+
+
+copy="137541_Moonlit Prism (910)"
+
+
+trinket1=,id=137541,ilevel=910
+
+
+
+copy="137541_Moonlit Prism (915)"
+
+
+trinket1=,id=137541,ilevel=915
+
+
+
+copy="137541_Moonlit Prism (920)"
+
+
+trinket1=,id=137541,ilevel=920
+
+
+
+copy="137541_Moonlit Prism (925)"
+
+
+trinket1=,id=137541,ilevel=925
+
+
+
+copy="137541_Moonlit Prism (930)"
+
+
+trinket1=,id=137541,ilevel=930
+
+
+
+copy="137541_Moonlit Prism (935)"
+
+
+trinket1=,id=137541,ilevel=935
+
+
+
+copy="137541_Moonlit Prism (940)"
+
+
+trinket1=,id=137541,ilevel=940
+
+
+
+copy="137541_Moonlit Prism (945)"
+
+
+trinket1=,id=137541,ilevel=945
+
+
+
+copy="137541_Moonlit Prism (950)"
+
+
+trinket1=,id=137541,ilevel=950
+
+
+
+copy="137541_Moonlit Prism (955)"
+
+
+trinket1=,id=137541,ilevel=955
+
+
+
+copy="142166_Ethereal Urn (865)"
+
+
+trinket1=,id=142166,ilevel=865
+
+
+
+copy="142166_Ethereal Urn (870)"
+
+
+trinket1=,id=142166,ilevel=870
+
+
+
+copy="142166_Ethereal Urn (875)"
+
+
+trinket1=,id=142166,ilevel=875
+
+
+
+copy="142166_Ethereal Urn (880)"
+
+
+trinket1=,id=142166,ilevel=880
+
+
+
+copy="142166_Ethereal Urn (885)"
+
+
+trinket1=,id=142166,ilevel=885
+
+
+
+copy="142166_Ethereal Urn (890)"
+
+
+trinket1=,id=142166,ilevel=890
+
+
+
+copy="142166_Ethereal Urn (895)"
+
+
+trinket1=,id=142166,ilevel=895
+
+
+
+copy="142166_Ethereal Urn (900)"
+
+
+trinket1=,id=142166,ilevel=900
+
+
+
+copy="142166_Ethereal Urn (905)"
+
+
+trinket1=,id=142166,ilevel=905
+
+
+
+copy="142166_Ethereal Urn (910)"
+
+
+trinket1=,id=142166,ilevel=910
+
+
+
+copy="142166_Ethereal Urn (915)"
+
+
+trinket1=,id=142166,ilevel=915
+
+
+
+copy="142166_Ethereal Urn (920)"
+
+
+trinket1=,id=142166,ilevel=920
+
+
+
+copy="142166_Ethereal Urn (925)"
+
+
+trinket1=,id=142166,ilevel=925
+
+
+
+copy="142166_Ethereal Urn (930)"
+
+
+trinket1=,id=142166,ilevel=930
+
+
+
+copy="142166_Ethereal Urn (935)"
+
+
+trinket1=,id=142166,ilevel=935
+
+
+
+copy="142166_Ethereal Urn (940)"
+
+
+trinket1=,id=142166,ilevel=940
+
+
+
+copy="142166_Ethereal Urn (945)"
+
+
+trinket1=,id=142166,ilevel=945
+
+
+
+copy="142166_Ethereal Urn (950)"
+
+
+trinket1=,id=142166,ilevel=950
+
+
+
+copy="142166_Ethereal Urn (955)"
+
+
+trinket1=,id=142166,ilevel=955
+
+
+
+copy="133642_Horn of Valor (865)"
+
+
+trinket1=,id=133642,ilevel=865
+
+
+
+copy="133642_Horn of Valor (870)"
+
+
+trinket1=,id=133642,ilevel=870
+
+
+
+copy="133642_Horn of Valor (875)"
+
+
+trinket1=,id=133642,ilevel=875
+
+
+
+copy="133642_Horn of Valor (880)"
+
+
+trinket1=,id=133642,ilevel=880
+
+
+
+copy="133642_Horn of Valor (885)"
+
+
+trinket1=,id=133642,ilevel=885
+
+
+
+copy="133642_Horn of Valor (890)"
+
+
+trinket1=,id=133642,ilevel=890
+
+
+
+copy="133642_Horn of Valor (895)"
+
+
+trinket1=,id=133642,ilevel=895
+
+
+
+copy="133642_Horn of Valor (900)"
+
+
+trinket1=,id=133642,ilevel=900
+
+
+
+copy="133642_Horn of Valor (905)"
+
+
+trinket1=,id=133642,ilevel=905
+
+
+
+copy="133642_Horn of Valor (910)"
+
+
+trinket1=,id=133642,ilevel=910
+
+
+
+copy="133642_Horn of Valor (915)"
+
+
+trinket1=,id=133642,ilevel=915
+
+
+
+copy="133642_Horn of Valor (920)"
+
+
+trinket1=,id=133642,ilevel=920
+
+
+
+copy="133642_Horn of Valor (925)"
+
+
+trinket1=,id=133642,ilevel=925
+
+
+
+copy="133642_Horn of Valor (930)"
+
+
+trinket1=,id=133642,ilevel=930
+
+
+
+copy="133642_Horn of Valor (935)"
+
+
+trinket1=,id=133642,ilevel=935
+
+
+
+copy="133642_Horn of Valor (940)"
+
+
+trinket1=,id=133642,ilevel=940
+
+
+
+copy="133642_Horn of Valor (945)"
+
+
+trinket1=,id=133642,ilevel=945
+
+
+
+copy="133642_Horn of Valor (950)"
+
+
+trinket1=,id=133642,ilevel=950
+
+
+
+copy="133642_Horn of Valor (955)"
+
+
+trinket1=,id=133642,ilevel=955
+
+
+
+copy="144477_Splinters of Agronax (865)"
+
+
+trinket1=,id=144477,ilevel=865
+
+
+
+copy="144477_Splinters of Agronax (870)"
+
+
+trinket1=,id=144477,ilevel=870
+
+
+
+copy="144477_Splinters of Agronax (875)"
+
+
+trinket1=,id=144477,ilevel=875
+
+
+
+copy="144477_Splinters of Agronax (880)"
+
+
+trinket1=,id=144477,ilevel=880
+
+
+
+copy="144477_Splinters of Agronax (885)"
+
+
+trinket1=,id=144477,ilevel=885
+
+
+
+copy="144477_Splinters of Agronax (890)"
+
+
+trinket1=,id=144477,ilevel=890
+
+
+
+copy="144477_Splinters of Agronax (895)"
+
+
+trinket1=,id=144477,ilevel=895
+
+
+
+copy="144477_Splinters of Agronax (900)"
+
+
+trinket1=,id=144477,ilevel=900
+
+
+
+copy="144477_Splinters of Agronax (905)"
+
+
+trinket1=,id=144477,ilevel=905
+
+
+
+copy="144477_Splinters of Agronax (910)"
+
+
+trinket1=,id=144477,ilevel=910
+
+
+
+copy="144477_Splinters of Agronax (915)"
+
+
+trinket1=,id=144477,ilevel=915
+
+
+
+copy="144477_Splinters of Agronax (920)"
+
+
+trinket1=,id=144477,ilevel=920
+
+
+
+copy="144477_Splinters of Agronax (925)"
+
+
+trinket1=,id=144477,ilevel=925
+
+
+
+copy="144477_Splinters of Agronax (930)"
+
+
+trinket1=,id=144477,ilevel=930
+
+
+
+copy="144477_Splinters of Agronax (935)"
+
+
+trinket1=,id=144477,ilevel=935
+
+
+
+copy="144477_Splinters of Agronax (940)"
+
+
+trinket1=,id=144477,ilevel=940
+
+
+
+copy="144477_Splinters of Agronax (945)"
+
+
+trinket1=,id=144477,ilevel=945
+
+
+
+copy="144477_Splinters of Agronax (950)"
+
+
+trinket1=,id=144477,ilevel=950
+
+
+
+copy="144477_Splinters of Agronax (955)"
+
+
+trinket1=,id=144477,ilevel=955
+
+
+
+copy="138224_Unstable Horrorslime (865)"
+
+
+trinket1=,id=138224,ilevel=865
+
+
+
+copy="138224_Unstable Horrorslime (870)"
+
+
+trinket1=,id=138224,ilevel=870
+
+
+
+copy="138224_Unstable Horrorslime (875)"
+
+
+trinket1=,id=138224,ilevel=875
+
+
+
+copy="138224_Unstable Horrorslime (880)"
+
+
+trinket1=,id=138224,ilevel=880
+
+
+
+copy="138224_Unstable Horrorslime (885)"
+
+
+trinket1=,id=138224,ilevel=885
+
+
+
+copy="138224_Unstable Horrorslime (890)"
+
+
+trinket1=,id=138224,ilevel=890
+
+
+
+copy="138224_Unstable Horrorslime (895)"
+
+
+trinket1=,id=138224,ilevel=895
+
+
+
+copy="138224_Unstable Horrorslime (900)"
+
+
+trinket1=,id=138224,ilevel=900
+
+
+
+copy="138224_Unstable Horrorslime (905)"
+
+
+trinket1=,id=138224,ilevel=905
+
+
+
+copy="138224_Unstable Horrorslime (910)"
+
+
+trinket1=,id=138224,ilevel=910
+
+
+
+copy="138224_Unstable Horrorslime (915)"
+
+
+trinket1=,id=138224,ilevel=915
+
+
+
+copy="138224_Unstable Horrorslime (920)"
+
+
+trinket1=,id=138224,ilevel=920
+
+
+
+copy="138224_Unstable Horrorslime (925)"
+
+
+trinket1=,id=138224,ilevel=925
+
+
+
+copy="138224_Unstable Horrorslime (930)"
+
+
+trinket1=,id=138224,ilevel=930
+
+
+
+copy="138224_Unstable Horrorslime (935)"
+
+
+trinket1=,id=138224,ilevel=935
+
+
+
+copy="138224_Unstable Horrorslime (940)"
+
+
+trinket1=,id=138224,ilevel=940
+
+
+
+copy="138224_Unstable Horrorslime (945)"
+
+
+trinket1=,id=138224,ilevel=945
+
+
+
+copy="138224_Unstable Horrorslime (950)"
+
+
+trinket1=,id=138224,ilevel=950
+
+
+
+copy="138224_Unstable Horrorslime (955)"
+
+
+trinket1=,id=138224,ilevel=955
+
+
+
+copy="139320_Ravaged Seed Pod (865)"
+
+
+trinket1=,id=139320,ilevel=865
+
+
+
+copy="139320_Ravaged Seed Pod (870)"
+
+
+trinket1=,id=139320,ilevel=870
+
+
+
+copy="139320_Ravaged Seed Pod (875)"
+
+
+trinket1=,id=139320,ilevel=875
+
+
+
+copy="139320_Ravaged Seed Pod (880)"
+
+
+trinket1=,id=139320,ilevel=880
+
+
+
+copy="139320_Ravaged Seed Pod (885)"
+
+
+trinket1=,id=139320,ilevel=885
+
+
+
+copy="139320_Ravaged Seed Pod (890)"
+
+
+trinket1=,id=139320,ilevel=890
+
+
+
+copy="139320_Ravaged Seed Pod (895)"
+
+
+trinket1=,id=139320,ilevel=895
+
+
+
+copy="139320_Ravaged Seed Pod (900)"
+
+
+trinket1=,id=139320,ilevel=900
+
+
+
+copy="139320_Ravaged Seed Pod (905)"
+
+
+trinket1=,id=139320,ilevel=905
+
+
+
+copy="139320_Ravaged Seed Pod (910)"
+
+
+trinket1=,id=139320,ilevel=910
+
+
