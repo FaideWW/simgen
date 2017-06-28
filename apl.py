@@ -85,12 +85,15 @@ BEAR_1T_RNT_TALENTS = "talents=http://us.battle.net/wow/en/tool/talent-calculato
 CAT_1T_TALENTS = "talents=http://us.battle.net/wow/en/tool/talent-calculator#Ub!0010210"
 BEAR_3T_TALENTS = "talents=http://us.battle.net/wow/en/tool/talent-calculator#Uba!0000110"
 BEAR_5T_TALENTS = "talents=http://us.battle.net/wow/en/tool/talent-calculator#Uba!0000110"
+MOON_3T_TALENTS = "talents=http://us.battle.net/wow/en/tool/talent-calculator#Uba!0000211"
 
 
 BEAR_1T_PULVERIZE_APL = Template("""
 ${talents_line}
+
+
 actions.precombat=flask,type=flask_of_the_seventh_demon
-actions.precombat+=/food,type=seedbattered_fish_plate
+actions.precombat+=/food,type=lemon_herb_filet
 actions.precombat+=/augmentation,type=defiled
 actions.precombat+=/bear_form
 actions.precombat+=/snapshot_stats
@@ -98,17 +101,22 @@ actions.precombat+=/potion,name=old_war
 
 actions=auto_attack
 actions+=/potion,name=old_war,if=buff.rage_of_the_sleeper.up
-actions+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up
+actions+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up|!talent.brambles.enabled&equipped.144432
 actions+=/berserking,if=buff.rage_of_the_sleeper.up
-actions+=/rage_of_the_sleeper,if=buff.bear_form.up&dot.moonfire.ticking
+actions+=/bristling_fur,if=!buff.rage_of_the_sleeper.up
+actions+=/incarnation,if=cooldown.thrash_bear.remains>0
+actions+=/moonfire,if=dot.moonfire.remains<4.8&buff.incarnation.remains>10
+actions+=/rage_of_the_sleeper,if=buff.bear_form.up&dot.moonfire.ticking|buff.incarnation.up
 ${maybe_proc_sephuz}
 ${maybe_use_trinket_1}
 ${maybe_use_trinket_2}
-actions+=/maul
 actions+=/pulverize,if=((cooldown.thrash_bear.remains<2&((dot.thrash_bear.stack=5&equipped.137067)|(dot.thrash_bear.stack=3&!equipped.137067)))|(dot.trash_bear.stack>=2&target.time_to_die<2)|(dot.trash_bear.stack>=4&target.time_to_die<4))
+actions+=/mangle,if=talent.soul_of_the_forest.enabled
 actions+=/thrash_bear
+actions+=/maul,if=talent.soul_of_the_forest.enabled&talent.bristling_fur.enabled
 actions+=/mangle
-actions+=/moonfire,if=buff.galactic_guardian.up
+actions+=/moonfire,if=dot.moonfire.remains<4.8|buff.galactic_guardian.up
+actions+=/maul
 actions+=/swipe_bear
 """)
 
@@ -139,10 +147,10 @@ actions.bear+=/moonfire,if=!dot.moonfire.ticking&(talent.incarnation.enabled|tal
 actions.bear+=/lunar_beam,if=(dot.rip.remains>10&buff.bear_form.up)
 actions.bear+=/rage_of_the_sleeper,if=(dot.rip.remains>10&buff.bear_form.up)
 actions.bear+=/thrash_bear,if=(buff.incarnation.up=1&dot.thrash_bear.remains<=2)|talent.rend_and_tear.enabled&dot.thrash_bear.stack<3|talent.rend_and_tear.enabled&equipped.137067&dot.thrash_bear.stack<5|equipped.137056
-actions.bear+=/maul
 actions.bear+=/mangle
 actions.bear+=/thrash_bear
 actions.bear+=/moonfire,if=buff.galactic_guardian.up
+actions.bear+=/maul
 actions.bear+=/swipe_bear
 
 actions.cat=dash,if=buff.cat_form.down
@@ -156,8 +164,9 @@ actions.cat+=/shred
 
 BEAR_3T_APL = Template("""
 ${talents_line}
+
 actions.precombat=flask,type=flask_of_the_seventh_demon
-actions.precombat+=/food,type=seedbattered_fish_plate
+actions.precombat+=/food,type=lemon_herb_filet
 actions.precombat+=/augmentation,type=defiled
 actions.precombat+=/bear_form
 actions.precombat+=/snapshot_stats
@@ -165,23 +174,25 @@ actions.precombat+=/potion,name=prolonged_power
 
 actions=auto_attack
 actions+=/potion,name=prolonged_power,if=buff.rage_of_the_sleeper.up
-actions+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up
+actions+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up|!talent.brambles.enabled&equipped.144432
 actions+=/berserking,if=buff.rage_of_the_sleeper.up
+actions+=/bristling_fur,if=!buff.rage_of_the_sleeper.up
 actions+=/incarnation,if=((dot.thrash_bear.stack=5&equipped.137067)|(dot.thrash_bear.stack=3&!equipped.137067))&cooldown.thrash_bear.remains>0
 actions+=/rage_of_the_sleeper,if=buff.bear_form.up
 ${maybe_proc_sephuz}
 ${maybe_use_trinket_1}
 ${maybe_use_trinket_2}
-actions+=/maul
 actions+=/thrash_bear
 actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up,cycle_targets=1,max_cycle_targets=2
 actions+=/mangle
-actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up,cycle_targets=1
+actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up|buff.galactic_guardian.up,cycle_targets=1
+actions+=/maul
 actions+=/swipe_bear
 """)
 
 BEAR_5T_INCARNUP_APL = Template("""
 ${talents_line}
+
 actions.precombat=flask,type=flask_of_the_seventh_demon
 actions.precombat+=/food,type=seedbattered_fish_plate
 actions.precombat+=/augmentation,type=defiled
@@ -193,19 +204,22 @@ actions=auto_attack
 actions+=/potion,name=prolonged_power,if=buff.rage_of_the_sleeper.up
 actions+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up
 actions+=/berserking,if=buff.rage_of_the_sleeper.up
+actions+=/bristling_fur,if=buff.rage_of_the_sleeper.down
+actions+=/lunar_beam,if=buff.rage_of_the_sleeper.up
 actions+=/incarnation,if=cooldown.thrash_bear.remains>0
 actions+=/rage_of_the_sleeper,if=buff.bear_form.up
 ${maybe_proc_sephuz}
 ${maybe_use_trinket_1}
 ${maybe_use_trinket_2}
-actions+=/maul
 actions+=/thrash_bear
 actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up,cycle_targets=1
+actions+=/maul
 actions+=/swipe_bear
 """)
 
 BEAR_5T_INCARNDOWN_APL = Template("""
 ${talents_line}
+
 actions.precombat=flask,type=flask_of_the_seventh_demon
 actions.precombat+=/food,type=seedbattered_fish_plate
 actions.precombat+=/augmentation,type=defiled
@@ -215,15 +229,53 @@ actions.precombat+=/potion,name=prolonged_power
 
 actions=auto_attack
 actions+=/potion,name=prolonged_power,if=buff.rage_of_the_sleeper.up
-#actions+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up
 actions+=/berserking,if=buff.rage_of_the_sleeper.up
+actions+=/bristling_fur,if=buff.rage_of_the_sleeper.down
 ${maybe_proc_sephuz}
 ${maybe_use_trinket_1}
 ${maybe_use_trinket_2}
-actions+=/maul
 actions+=/thrash_bear
 actions+=/moonfire,if=dot.moonfire.remains<4.8&!buff.incarnation.up&(target.time_to_die*1.6)>(16+dot.moonfire.remains),cycle_targets=1
+actions+=/maul
 actions+=/swipe_bear
+""")
+
+MOON_3T_APL = Template("""
+${talents_line}
+
+actions.precombat=flask,type=flask_of_the_seventh_demon
+actions.precombat+=/food,type=lemon_herb_filet
+actions.precombat+=/augmentation,type=defiled
+actions.precombat+=/moonkin_form
+actions.precombat+=/snapshot_stats
+actions.precombat+=/potion,name=prolonged_power
+
+actions=sunfire,if=time<1
+actions+=/call_action_list,name=moonkin,if=!dot.sunfire.ticking&!buff.rage_of_the_sleeper.up
+actions+=/call_action_list,name=bear
+
+actions.bear=bear_form,if=!buff.bear_form.up
+actions.bear+=/auto_attack
+actions.bear+=/potion,name=prolonged_power,if=buff.rage_of_the_sleeper.up
+actions.bear+=/barkskin,if=talent.brambles.enabled&buff.rage_of_the_sleeper.up|equipped.144432
+actions.bear+=/berserking,if=buff.rage_of_the_sleeper.up
+actions.bear+=/bristling_fur,if=!buff.rage_of_the_sleeper.up
+actions.bear+=/incarnation,if=cooldown.thrash_bear.remains>0
+actions.bear+=/lunar_beam,if=buff.rage_of_the_sleeper.up
+actions.bear+=/moonfire,if=dot.moonfire.remains<4.8&buff.incarnation.remains>10
+actions.bear+=/rage_of_the_sleeper,if=buff.bear_form.up&dot.moonfire.ticking|buff.incarnation.up
+${maybe_proc_sephuz}
+${maybe_use_trinket_1}
+${maybe_use_trinket_2}
+actions.bear+=/pulverize,if=((cooldown.thrash_bear.remains<2&((dot.thrash_bear.stack=5&equipped.137067)|(dot.thrash_bear.stack=3&!equipped.137067)))|(dot.trash_bear.stack>=2&target.time_to_die<2)|(dot.trash_bear.stack>=4&target.time_to_die<4))
+actions.bear+=/thrash_bear
+actions.bear+=/mangle,if=spell_targets.thrash_bear<=4
+actions.bear+=/moonfire,if=(dot.moonfire.remains<4.8|buff.galactic_guardian.up)&spell_targets.thrash_bear<=4
+actions.bear+=/maul,if=spell_targets.thrash_bear<=4
+actions.bear+=/swipe_bear
+
+actions.moonkin=moonkin_form,if=!buff.moonkin_form.up
+actions.moonkin+=/sunfire
 """)
 
 def buildAPL(apl_template = Template(""""""), talents = "", proc_sephuz = "", use_trinket_1 = "", use_trinket_2 = ""):
@@ -277,8 +329,17 @@ def buildBear5TIncarnDownAPL(talents = None, proc_sephuz = False, use_trinket = 
             use_trinket_1 = bear_use_trinket_1 if use_trinket % 2 == 1 else "",
             use_trinket_2 = bear_use_trinket_2 if use_trinket > 0 and use_trinket % 2 == 0 else "")
 
+def buildMoon3TAPL(talents = None, proc_sephuz = False, use_trinket = 0):
+    return buildAPL(
+            apl_template = MOON_3T_APL,
+            talents = BEAR_3T_TALENTS,
+            proc_sephuz = bear_proc_sephuz if proc_sephuz == True else "",
+            use_trinket_1 = bear_use_trinket_1 if use_trinket % 2 == 1 else "",
+            use_trinket_2 = bear_use_trinket_2 if use_trinket > 0 and use_trinket % 2 == 0 else "")
 
 
+
+trinket_stat_template_940 = ",stats=2728agi_1321vers_0crit_0mastery_0haste"
 trinket_stat_template_920 = ",stats=2264agi_1225vers_0crit_0mastery_0haste"
 trinket_stat_template_900 = ",stats=1879agi_1137vers_0crit_0mastery_0haste"
 
@@ -303,7 +364,11 @@ ${apl_override}
 """)
 
 def buildGearReset(ilevel):
-    trinket_stats = trinket_stat_template_920 if ilevel == 920 else trinket_stat_template_900
+    trinket_stats = trinket_stat_template_900
+    if ilevel == 940:
+        trinket_stats = trinket_stat_template_940
+    elif ilevel == 920:
+        trinket_stats = trinket_stat_template_920
     return gear_reset.substitute(trinket_stat_template = trinket_stats)
 
 def buildCopy(copy_name = "", gear_reset = "", gear_override = "", apl_override = ""):
@@ -344,10 +409,14 @@ def getStatTemplate(ilevel):
         return ",stats=15464agi_5143crit_5143haste_5143mastery_5143versatility"
     elif ilevel == 920:
         return  ",stats=18626agi_5653crit_5653haste_5653mastery_5653versatility"
+    elif ilevel == 940:
+        return ",stats=28432agi_6631crit_6631haste_6631mastery_6631versatility"
 
 def getWeaponLevel(ilevel):
-    if ilevel == 920:
-        return ",ilevel=942"
-    elif ilevel == 900:
+    if ilevel == 900:
         return ",ilevel=924"
+    elif ilevel == 920:
+        return ",ilevel=942"
+    elif ilevel == 940:
+        return ",ilevel=960"
 
